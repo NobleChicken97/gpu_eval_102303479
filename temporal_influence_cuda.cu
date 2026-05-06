@@ -66,20 +66,6 @@ bool read_edges(const std::string& path, std::vector<Edge>& edges, int& max_node
     return true;
 }
 
-  
-void generate_random_edges(int nodes, int edges_count, std::vector<Edge>& edges, float& max_time) {
-    edges.reserve(edges_count);
-    for (int i = 0; i < edges_count; ++i) {
-        Edge e{};
-        e.src = i % nodes;
-        e.dst = (i * 13) % nodes;
-        e.t = static_cast<float>(i) * 0.5f;
-        e.w = 1.0f + static_cast<float>(i % 5) * 0.1f;
-        max_time = std::max(max_time, e.t);
-        edges.push_back(e);
-    }
-}
-
 void cuda_check(cudaError_t err, const char* msg) {
     if (err != cudaSuccess) {
         std::cerr << msg << ": " << cudaGetErrorString(err) << "\n";
