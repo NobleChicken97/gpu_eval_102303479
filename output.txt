@@ -1,0 +1,6 @@
+Top 5 nodes by temporal influence score:
+  node=1624 score=2
+  node=277 score=0.278037
+  node=1097 score=0.0773047
+  node=1847 score=0.0214936
+  node=311 score=0.00166156
