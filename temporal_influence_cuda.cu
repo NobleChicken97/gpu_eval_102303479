@@ -107,9 +107,7 @@ int main(int argc, char** argv) {
             return 1;
         }
         nodes = std::max(nodes, max_node + 1);
-    } else {
-        generate_random_edges(nodes, random_edges, edges, max_time);
-    }
+    } 
 
     if (t_now < 0.0f) {
         t_now = max_time;
